@@ -1,2 +1,2 @@
-# chart-svg-flask
+# svg-flask
 svg example - Flask
