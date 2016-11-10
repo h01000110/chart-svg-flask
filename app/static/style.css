@@ -1,0 +1,20 @@
+polyline{
+    stroke: #000000;
+    stroke-width: 1;
+    fill: none;
+}
+text{
+    font-size: 0.4em;
+}
+.center{
+    width: 600px;
+    margin: auto;
+}
+form{
+    float: left;
+    margin: 10px;
+    height: 40px;
+}
+.foo {
+    margin-top: 5px;
+}

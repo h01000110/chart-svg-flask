@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>flask-svg-example</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <svg width="100%" height="500px" viewBox="0 0 300 100">
+        <g transform="translate(0,100) scale(1,-1)">
+            <polyline points="5,{{ jan }} 30,{{ fev }} 55,{{ mar }} 80,{{ abr }} 105,{{ mai }} 130,{{ jun }} 
+            155,{{ jul }} 180,{{ ago }} 205,{{ set }} 230,{{ out }} 255,{{ nov }} 280,{{ dez }}" />
+        </g>
+        <text x="0" y="5" dy="0">{{ tudo }}</text>
+        <text x="0" y="50" dy="0">{{ metade }}</text>
+        <text x="0" y="95" dy="0">0</text>
+        <text x="0" y="100" dy="0">Jan</text>
+        <text x="25" y="100" dy="0">Fev</text>
+        <text x="50" y="100" dy="0">Mar</text>
+        <text x="75" y="100" dy="0">Abr</text>
+        <text x="100" y="100" dy="0">Mai</text>
+        <text x="125" y="100" dy="0">Jun</text>
+        <text x="150" y="100" dy="0">Jul</text>
+        <text x="175" y="100" dy="0">Ago</text>
+        <text x="200" y="100" dy="0">Set</text>
+        <text x="225" y="100" dy="0">Out</text>
+        <text x="250" y="100" dy="0">Nov</text>
+        <text x="275" y="100" dy="0">Dez</text>
+    </svg>
+    <div class="center">
+        <form action="{{ url_for('altera') }}" method="POST">
+            <input type="text" name="dado">
+                <select name="mes">
+                    <option value="1">Jan</option>
+                    <option value="2">Fev</option>
+                    <option value="3">Mar</option>
+                    <option value="4">Abr</option>
+                    <option value="5">Mai</option>
+                    <option value="6">Jun</option>
+                    <option value="7">Jul</option>
+                    <option value="8">Ago</option>
+                    <option value="9">Set</option>
+                    <option value="10">Out</option>
+                    <option value="11">Nov</option>
+                    <option value="12">Dez</option>
+                </select>
+            <input type="submit" value="Alterar">
+        </form>
+        <form action="{{ url_for('reset') }}" method="POST">
+            <input class="foo" type="submit" value="Reset">
+        </form>
+    </div>
+</body>
+</html>
